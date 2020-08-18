@@ -11,6 +11,8 @@
         </li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
+
+        <!-- **RESUME OPENS NEW TAB -->
         <li><a class="nav-link" href="#">Resume</a></li>
       </ul>
       <div v-on:click="navSlide" class="burger" ref="burger">
@@ -19,12 +21,15 @@
         <div class="line3"></div>
       </div>
     </nav>
-    <!-- **RESUME OPENS NEW TAB -->
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- HOME -->
+    <section id="home"></section>
     <!-- ABOUT -->
+    <section id="about"></section>
     <!-- PROJECTS -->
+    <section id="projects"></section>
     <!-- CONTACT -->
+    <section id="contact"></section>
   </div>
 </template>
 
@@ -73,7 +78,7 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 8vh;
 }
@@ -81,12 +86,14 @@ nav {
 .logo {
   font-size: 20px;
   letter-spacing: 5px;
+  margin-left: 4rem;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
   justify-content: space-around;
+  margin-right: 4rem;
   width: 35%;
 }
 
@@ -132,6 +139,7 @@ nav {
 
   .nav-links {
     background-color: #3db876;
+    margin-right: 0px;
     position: absolute;
     right: 0px;
     height: 92vh;
@@ -150,6 +158,7 @@ nav {
 
   .burger {
     display: block;
+    margin-right: 2rem;
   }
 }
 

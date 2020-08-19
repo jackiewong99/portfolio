@@ -64,13 +64,25 @@ button {
   width: clamp(30ch, 50%, 46ch);
 }
 
+@media screen and (max-width: 1130px) {
+  .home {
+    left: 13rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .home {
     left: 15rem;
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 57px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .home {
+    left: 11rem;
   }
 }
 
@@ -80,7 +92,13 @@ button {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 527px) {
+  .home {
+    left: 6rem;
   }
 }
 </style>

@@ -21,9 +21,8 @@
         <div class="line3"></div>
       </div>
     </nav>
-    <img alt="Vue logo" src="./assets/logo.png" />
     <!-- HOME -->
-    <section id="home"></section>
+    <Home id="home" />
     <!-- ABOUT -->
     <section id="about"></section>
     <!-- PROJECTS -->
@@ -34,8 +33,13 @@
 </template>
 
 <script>
+import Home from './views/Home';
+
 export default {
   name: 'App',
+  components: {
+    Home
+  },
   methods: {
     navSlide() {
       const burger = this.$refs.burger;
@@ -63,6 +67,7 @@ export default {
 </script>
 
 <style>
+/* BODY */
 body {
   margin: 0;
   padding: 0;
@@ -76,14 +81,17 @@ body {
   color: #2c3e50;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
+  z-index: 3;
 }
 
 .logo {
+  cursor: pointer;
   font-size: 20px;
   letter-spacing: 5px;
   margin-left: 4rem;
@@ -188,4 +196,10 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+
+/* HOME COMPONENT */
+/* #home {
+  width: 100%;
+  height: 90vh;
+} */
 </style>

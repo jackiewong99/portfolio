@@ -1,9 +1,13 @@
 <template>
-  <div></div>
+  <div class="about">
+    <h1>About Me</h1>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'About'
+};
 </script>
 
 <style scoped></style>

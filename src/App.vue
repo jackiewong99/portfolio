@@ -21,24 +21,35 @@
         <div class="line3"></div>
       </div>
     </nav>
-    <!-- HOME -->
-    <Home id="home" />
-    <!-- ABOUT -->
-    <section id="about"></section>
-    <!-- PROJECTS -->
-    <section id="projects"></section>
-    <!-- CONTACT -->
-    <section id="contact"></section>
+    <main>
+      <!-- HOME -->
+      <!-- Idea: -->
+      <!-- Style positioning of the home component in this 'main' element -->
+      <!-- In the Home component, only style the font and text alignment. -->
+      <section id="home">
+        <Home />
+      </section>
+      <!-- ABOUT -->
+      <section id="about">
+        <About />
+      </section>
+      <!-- PROJECTS -->
+      <section id="projects"></section>
+      <!-- CONTACT -->
+      <section id="contact"></section>
+    </main>
   </div>
 </template>
 
 <script>
 import Home from './views/Home';
+import About from './views/About';
 
 export default {
   name: 'App',
   components: {
-    Home
+    Home,
+    About
   },
   methods: {
     navSlide() {
@@ -79,6 +90,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -197,9 +209,55 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* HOME COMPONENT */
-/* #home {
-  width: 100%;
-  height: 90vh;
-} */
+main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  padding-top: 10px;
+}
+
+#home {
+  padding: 13rem 1rem 10rem 1rem;
+}
+
+#about {
+  padding: 9rem 1rem 21rem 1rem;
+}
+
+/* Main Media Queries */
+@media screen and (max-width: 1354px) {
+  #home {
+    padding-left: 8rem;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  #home {
+    padding-left: 11rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #home {
+    padding-left: 9rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #home {
+    padding-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+    padding-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 527px) {
+  #home {
+    padding-left: 4rem;
+  }
+}
 </style>

@@ -23,12 +23,7 @@ export default {
   flex-direction: column;
   align-items: end;
   justify-content: end;
-  width: 70%;
-  height: 69%;
-  position: absolute;
-  left: 20rem;
-  top: 17rem;
-  padding-bottom: 5px;
+  width: 100%;
   text-align: left;
 }
 
@@ -47,7 +42,7 @@ button {
   border-radius: 6px;
   cursor: pointer;
   margin: 5px 0px 0px 4px;
-  padding: 10px;
+  padding: 20px 30px;
   outline: none;
 }
 
@@ -60,45 +55,18 @@ button {
 }
 
 .description {
-  /* width: 37%; */
-  width: clamp(30ch, 50%, 46ch);
-}
-
-@media screen and (max-width: 1130px) {
-  .home {
-    left: 13rem;
-  }
+  width: clamp(32ch, 50%, 46ch);
 }
 
 @media screen and (max-width: 1024px) {
-  .home {
-    left: 15rem;
-  }
-
   h1 {
     font-size: 57px;
   }
 }
 
-@media screen and (max-width: 880px) {
-  .home {
-    left: 11rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .home {
-    left: 8rem;
-  }
-
   h1 {
     font-size: 35px;
-  }
-}
-
-@media screen and (max-width: 527px) {
-  .home {
-    left: 6rem;
   }
 }
 </style>

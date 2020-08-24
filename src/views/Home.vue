@@ -2,7 +2,7 @@
   <div class="home">
     <p>Hi, my name is</p>
     <h1 class="name">Jackie Wong.</h1>
-    <h1 class="intro">I build cool projects for the web.</h1>
+    <h1 class="intro">I build projects for the web.</h1>
     <p class="description">
       I am a self-learning web developer based in Honolulu, HI specializing in
       building modern websites, web apps, and all else on the web.

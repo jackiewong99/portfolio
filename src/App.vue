@@ -79,6 +79,10 @@ export default {
 
 <style>
 /* BODY */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -90,7 +94,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -209,6 +212,7 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* MAIN */
 main {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -216,15 +220,17 @@ main {
   padding-top: 10px;
 }
 
+/* HOME */
 #home {
   padding: 13rem 1rem 10rem 1rem;
 }
 
+/* ABOUT */
 #about {
-  padding: 9rem 1rem 21rem 1rem;
+  padding: 9rem 5rem 21rem 5rem;
 }
 
-/* Main Media Queries */
+/* MAIN MEDIA QUERIES */
 @media screen and (max-width: 1354px) {
   #home {
     padding-left: 8rem;

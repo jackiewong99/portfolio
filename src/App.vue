@@ -34,7 +34,9 @@
         <About />
       </section>
       <!-- PROJECTS -->
-      <section id="projects"></section>
+      <section id="projects">
+        <Projects />
+      </section>
       <!-- CONTACT -->
       <section id="contact"></section>
     </main>
@@ -44,12 +46,14 @@
 <script>
 import Home from './views/Home';
 import About from './views/About';
+import Projects from './views/Projects';
 
 export default {
   name: 'App',
   components: {
     Home,
-    About
+    About,
+    Projects
   },
   methods: {
     navSlide() {
@@ -228,6 +232,11 @@ main {
 /* ABOUT */
 #about {
   padding: 9rem 5rem 21rem 5rem;
+}
+
+/* PROJECTS */
+#projects {
+  padding: 13rem 1rem 10rem 1rem;
 }
 
 /* MAIN MEDIA QUERIES */

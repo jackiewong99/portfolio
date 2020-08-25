@@ -76,4 +76,29 @@ header h1 {
   width: 360px;
   height: 360px;
 }
+
+@media screen and (max-width: 1227px) {
+  .content .profile-img {
+    padding-top: 5rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content .profile-img::before {
+    width: 230px;
+    height: 230px;
+    transform: translateX(7rem) translateY(60px);
+  }
+
+  .content img {
+    width: 230px;
+    height: 230px;
+  }
+}
 </style>

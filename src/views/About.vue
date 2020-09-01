@@ -16,6 +16,17 @@
             technologies when applicable.
           </p>
           <p>Technologies I've Worked With:</p>
+          <div class="tech-list">
+            <ul class="first-list">
+              <li>JavaScript (ES6+)</li>
+              <li>Node.js</li>
+              <li>Vue.js</li>
+            </ul>
+            <ul class="second-list">
+              <li>React.js</li>
+              <li>HTML & (S)CSS</li>
+            </ul>
+          </div>
         </div>
         <div class="profile-img">
           <!-- <p>Insert Profile Image Here</p> -->
@@ -55,6 +66,41 @@ header h1 {
   width: clamp(40ch, 50%, 50ch);
 }
 
+.content .tech-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.tech-list ul {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.tech-list .second-list {
+  padding-left: 3rem;
+}
+
+ul li {
+  font-size: 15px;
+  list-style: none;
+  padding: 0 0 7px 20px;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #505f6d;
+  border-width: 2px 2px 0 0;
+  transform: rotate(45deg);
+}
+
 .content .profile-img {
   padding-right: 5rem;
 }
@@ -71,7 +117,7 @@ header h1 {
   z-index: -1;
 }
 
-.content img {
+.profile-img img {
   border-radius: 50%;
   width: 360px;
   height: 360px;
@@ -90,6 +136,11 @@ header h1 {
 }
 
 @media screen and (max-width: 768px) {
+  .content .profile-img {
+    padding-right: 6rem;
+    padding-top: 2rem;
+  }
+
   .content .profile-img::before {
     width: 230px;
     height: 230px;

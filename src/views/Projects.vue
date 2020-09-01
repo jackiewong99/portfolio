@@ -7,7 +7,7 @@
       <div class="card">
         <img src="../assets/logo.png" alt="" />
         <div class="container">
-          <h4>Project Name</h4>
+          <h2>Project Name</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
             saepe temporibus hic similique, beatae accusamus accusantium cum
@@ -21,7 +21,7 @@
       <div class="card">
         <img src="../assets/logo.png" alt="" />
         <div class="container">
-          <h4>Project Name</h4>
+          <h2>Project Name</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
             saepe temporibus hic similique, beatae accusamus accusantium cum
@@ -35,7 +35,7 @@
       <div class="card">
         <img src="../assets/logo.png" alt="" />
         <div class="container">
-          <h4>Project Name</h4>
+          <h2>Project Name</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
             saepe temporibus hic similique, beatae accusamus accusantium cum
@@ -49,7 +49,7 @@
       <div class="card">
         <img src="../assets/logo.png" alt="" />
         <div class="container">
-          <h4>Project Name</h4>
+          <h2>Project Name</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
             saepe temporibus hic similique, beatae accusamus accusantium cum
@@ -84,6 +84,11 @@ header h1 {
 .card {
   background-color: #80c0e8;
   border-radius: 15px;
+  transition: 0.3s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-8px);
 }
 
 .card .container {
@@ -91,7 +96,6 @@ header h1 {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  overflow: hidden;
 }
 
 .card .container p {

@@ -14,9 +14,7 @@
             excepturi repudiandae pariatur ducimus voluptatibus iste, aut
             consequatur. Exercitationem magni dicta inventore voluptas non,
             cupiditate ad omnis aperiam voluptate odit laudantium soluta
-            doloremque quae, voluptatem rerum iste qui eligendi ab assumenda
-            consequuntur? Eos ut dignissimos eum velit voluptatem rem
-            reprehenderit impedit quae vel!
+            doloremque quae
           </p>
         </div>
       </div>
@@ -30,9 +28,7 @@
             excepturi repudiandae pariatur ducimus voluptatibus iste, aut
             consequatur. Exercitationem magni dicta inventore voluptas non,
             cupiditate ad omnis aperiam voluptate odit laudantium soluta
-            doloremque quae, voluptatem rerum iste qui eligendi ab assumenda
-            consequuntur? Eos ut dignissimos eum velit voluptatem rem
-            reprehenderit impedit quae vel!
+            doloremque quae
           </p>
         </div>
       </div>
@@ -46,9 +42,7 @@
             excepturi repudiandae pariatur ducimus voluptatibus iste, aut
             consequatur. Exercitationem magni dicta inventore voluptas non,
             cupiditate ad omnis aperiam voluptate odit laudantium soluta
-            doloremque quae, voluptatem rerum iste qui eligendi ab assumenda
-            consequuntur? Eos ut dignissimos eum velit voluptatem rem
-            reprehenderit impedit quae vel!tion
+            doloremque quae
           </p>
         </div>
       </div>
@@ -62,9 +56,7 @@
             excepturi repudiandae pariatur ducimus voluptatibus iste, aut
             consequatur. Exercitationem magni dicta inventore voluptas non,
             cupiditate ad omnis aperiam voluptate odit laudantium soluta
-            doloremque quae, voluptatem rerum iste qui eligendi ab assumenda
-            consequuntur? Eos ut dignissimos eum velit voluptatem rem
-            reprehenderit impedit quae vel!
+            doloremque quae
           </p>
         </div>
       </div>
@@ -86,7 +78,7 @@ header h1 {
 .project-cards {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
@@ -99,9 +91,10 @@ header h1 {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  overflow: hidden;
 }
 
 .card .container p {
-  width: clamp(33ch, 60%, 46ch);
+  width: clamp(33ch, 50%, 46ch);
 }
 </style>

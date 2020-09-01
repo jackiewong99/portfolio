@@ -40,7 +40,9 @@ button {
   background-color: #ffffff;
   border: 2px solid #1d99db;
   border-radius: 6px;
+  color: #505f6d;
   cursor: pointer;
+  font-size: 18px;
   margin: 5px 0px 0px 4px;
   padding: 20px 30px;
   outline: none;

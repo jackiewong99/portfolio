@@ -231,12 +231,12 @@ main {
 
 /* ABOUT */
 #about {
-  padding: 9rem 5rem 21rem 5rem;
+  padding: 9rem 5rem 19rem 5rem;
 }
 
 /* PROJECTS */
 #projects {
-  padding: 13rem 1rem 10rem 1rem;
+  padding: 4rem 1rem 10rem 1rem;
 }
 
 /* MAIN MEDIA QUERIES */

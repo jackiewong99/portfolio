@@ -24,7 +24,7 @@
             </ul>
             <ul class="second-list">
               <li>React.js</li>
-              <li>HTML & (S)CSS</li>
+              <li>HTML &amp; (S)CSS</li>
               <li>Java</li>
             </ul>
           </div>

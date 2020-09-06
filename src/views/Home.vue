@@ -7,7 +7,7 @@
       I am a self-learning web developer based in Honolulu, HI specializing in
       building modern websites, web apps, and all else on the web.
     </p>
-    <button>Contact me</button>
+    <button>Get In Touch</button>
   </div>
 </template>
 

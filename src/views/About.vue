@@ -25,6 +25,7 @@
             <ul class="second-list">
               <li>React.js</li>
               <li>HTML & (S)CSS</li>
+              <li>Java</li>
             </ul>
           </div>
         </div>
@@ -144,7 +145,7 @@ ul li::before {
   .content .profile-img::before {
     width: 230px;
     height: 230px;
-    transform: translateX(7rem) translateY(60px);
+    transform: translateX(7rem) translateY(50px);
   }
 
   .content img {

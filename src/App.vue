@@ -64,6 +64,12 @@ export default {
       // Burger animation
       burger.classList.toggle('toggle');
 
+      if (nav.style.backgroundColor === '') {
+        nav.style.backgroundColor = 'var(--primary-color)';
+      } else {
+        nav.style.backgroundColor = '';
+      }
+
       nav.classList.toggle('nav-active');
 
       // Animate links
@@ -170,7 +176,6 @@ nav {
   }
 
   .nav-links {
-    background-color: var(--primary-color);
     margin-right: 0px;
     position: absolute;
     right: 0px;

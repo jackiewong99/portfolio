@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>Hi, my name is</p>
+    <p>Hello, my name is</p>
     <h1 class="name">Jackie Wong.</h1>
     <h1 class="intro">I build projects for the web.</h1>
     <p class="description">
@@ -25,22 +25,30 @@ export default {
   justify-content: end;
   width: 100%;
   text-align: left;
+  --primary-text-color: #5c8d89;
+  --secondary-text-color: #6da28e;
 }
 
 h1 {
+  color: var(--primary-text-color);
   font-size: 5rem;
 }
 
+p:first-child {
+  color: #78d1af;
+}
+
 p {
+  color: var(--secondary-text-color);
   font-size: 18px;
   margin: 0px 0px 5px 4px;
 }
 
 button {
-  background-color: #ffffff;
-  border: 2px solid #1d99db;
+  background-color: rgba(255, 246, 203, 0);
+  border: 3px solid var(--secondary-text-color);
   border-radius: 6px;
-  color: #505f6d;
+  color: var(--secondary-text-color);
   cursor: pointer;
   font-size: 18px;
   margin: 5px 0px 0px 4px;

@@ -5,6 +5,10 @@
     </header>
     <main>
       <div class="content">
+        <div class="profile-img">
+          <!-- <p>Insert Profile Image Here</p> -->
+          <img src="../assets/profile_img.jpg" alt="Profile Image" />
+        </div>
         <div class="bio">
           <p>
             Hi there! I'm Jackie, a self-learning developer based in Honolulu,
@@ -29,10 +33,6 @@
             </ul>
           </div>
         </div>
-        <div class="profile-img">
-          <!-- <p>Insert Profile Image Here</p> -->
-          <img src="../assets/profile_img.jpg" alt="Profile Image" />
-        </div>
       </div>
     </main>
   </div>
@@ -48,9 +48,13 @@ export default {
 .about {
   display: grid;
   grid-template-rows: auto 1fr;
+  --primary-color: #5c8d89;
+  --secondary-color: #6da28e;
+  --profile-bg-color: #cbf8c885;
 }
 
 header h1 {
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -63,6 +67,7 @@ header h1 {
 }
 
 .content .bio {
+  color: var(--secondary-color);
   padding: 7px 15px 10px 50px;
   width: clamp(40ch, 50%, 50ch);
 }
@@ -97,7 +102,7 @@ ul li::before {
   top: 6px;
   height: 5px;
   width: 5px;
-  border: 1px solid #505f6d;
+  border: 1px solid var(--primary-color);
   border-width: 2px 2px 0 0;
   transform: rotate(45deg);
 }
@@ -108,7 +113,7 @@ ul li::before {
 
 .content .profile-img::before {
   content: '';
-  background-color: #1d99db;
+  background-color: var(--profile-bg-color);
   border-radius: 50%;
   opacity: 0.7;
   position: absolute;
@@ -124,22 +129,32 @@ ul li::before {
   height: 360px;
 }
 
-@media screen and (max-width: 1227px) {
-  .content .profile-img {
-    padding-top: 5rem;
+@media screen and (max-width: 1333px) {
+  .content .bio {
+    padding-left: 6rem;
   }
+}
 
+@media screen and (max-width: 1227px) {
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .content .profile-img {
+    padding-top: 5rem;
+  }
+
+  .content .bio {
+    padding-top: 4rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .content .profile-img {
     padding-right: 6rem;
-    padding-top: 2rem;
+    padding-top: 5px;
   }
 
   .content .profile-img::before {
@@ -151,6 +166,11 @@ ul li::before {
   .content img {
     width: 230px;
     height: 230px;
+  }
+
+  .content .bio {
+    padding-top: 4rem;
+    padding: 4rem 3rem 1rem 5rem;
   }
 }
 </style>

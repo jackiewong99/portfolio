@@ -88,6 +88,7 @@ html {
 }
 
 body {
+  background-color: #ffffed;
   margin: 0;
   padding: 0;
 }
@@ -98,6 +99,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  --primary-color: #a7d7c5;
+  --secondary-color: #5c8d89;
+  --hover-color: #57ddf3;
 }
 
 /* NAV */
@@ -110,6 +114,7 @@ nav {
 }
 
 .logo {
+  color: var(--secondary-color);
   cursor: pointer;
   font-size: 20px;
   letter-spacing: 5px;
@@ -125,7 +130,7 @@ nav {
 }
 
 .nav-link {
-  color: #2c3e50;
+  color: var(--secondary-color);
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 3px;
@@ -136,7 +141,7 @@ nav {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-  color: #6c9dce;
+  color: var(--hover-color);
 }
 
 .burger {
@@ -145,7 +150,7 @@ nav {
 }
 
 .burger div {
-  background-color: #6c9dce;
+  background-color: var(--primary-color);
   border-radius: 50px;
   height: 3px;
   width: 25px;
@@ -165,7 +170,7 @@ nav {
   }
 
   .nav-links {
-    background-color: #3db876;
+    background-color: var(--primary-color);
     margin-right: 0px;
     position: absolute;
     right: 0px;

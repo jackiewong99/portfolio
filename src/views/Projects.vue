@@ -46,50 +46,6 @@
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-content">
-          <img src="../assets/logo.png" alt="" />
-          <div class="container">
-            <h2>Project Name 333</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              incidunt laboriosam fugiat iste tempore perferendis nostrum ipsam.
-              Praesentium nemo cum veniam placeat dicta voluptate, atque
-              officiis optio ex possimus quia doloribus quasi quis ipsa at.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <img src="../assets/logo.png" alt="" />
-          <div class="container">
-            <h2>Project Name 222</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              incidunt laboriosam fugiat iste tempore perferendis nostrum ipsam.
-              Praesentium nemo cum veniam placeat dicta voluptate, atque
-              officiis optio ex possimus quia doloribus quasi quis ipsa at.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <img src="../assets/logo.png" alt="" />
-          <div class="container">
-            <h2>Project Name 111</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Molestias, quaerat?
-              <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              incidunt laboriosam fugiat iste tempore perferendis nostrum ipsam.
-              Praesentium nemo cum veniam placeat dicta voluptate, atque
-              officiis optio ex possimus quia doloribus quasi quis ipsa at. -->
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -101,7 +57,14 @@ export default {
 </script>
 
 <style scoped>
+.projects {
+  --header-color: #5c8d89;
+  --primary-color: #ddfddb;
+  --secondary-color: #6da28e;
+}
+
 header h1 {
+  color: var(--header-color);
   font-size: 32px;
 }
 
@@ -115,7 +78,7 @@ header h1 {
 }
 
 .card {
-  background-color: #80c0e8;
+  background-color: var(--primary-color);
   border-radius: 15px;
   transition: 0.3s ease-in;
   height: 425px;
@@ -130,6 +93,7 @@ header h1 {
 }
 
 .card .card-content h2 {
+  color: var(--header-color);
   margin: 0;
 }
 
@@ -138,6 +102,7 @@ header h1 {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 1268px) {

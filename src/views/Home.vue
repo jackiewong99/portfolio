@@ -45,7 +45,7 @@ p {
 }
 
 button {
-  background-color: rgba(255, 246, 203, 0);
+  background-color: #ffffed;
   border: 3px solid var(--secondary-text-color);
   border-radius: 6px;
   color: var(--secondary-text-color);
@@ -54,6 +54,13 @@ button {
   margin: 5px 0px 0px 4px;
   padding: 20px 30px;
   outline: none;
+  transition: 0.3s ease-in;
+}
+
+button:hover {
+  /* background-color: rgba(255, 255, 237, 0.3); */
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.6;
 }
 
 .name {

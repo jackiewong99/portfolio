@@ -23,9 +23,6 @@
     </nav>
     <main>
       <!-- HOME -->
-      <!-- Idea: -->
-      <!-- Style positioning of the home component in this 'main' element -->
-      <!-- In the Home component, only style the font and text alignment. -->
       <section id="home">
         <Home />
       </section>

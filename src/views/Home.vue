@@ -19,19 +19,21 @@ export default {
 
 <style scoped>
 .home {
+  --primary-text-color: #5c8d89;
+  --secondary-text-color: #6da28e;
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: end;
   width: 100%;
   text-align: left;
-  --primary-text-color: #5c8d89;
-  --secondary-text-color: #6da28e;
+  transition: all 0.2s linear;
 }
 
 h1 {
   color: var(--primary-text-color);
   font-size: 5rem;
+  word-break: break-word;
 }
 
 p:first-child {
@@ -83,7 +85,7 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 </style>

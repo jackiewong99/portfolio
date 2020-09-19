@@ -46,11 +46,13 @@ export default {
 
 <style scoped>
 .about {
-  display: grid;
-  grid-template-rows: auto 1fr;
   --primary-color: #5c8d89;
   --secondary-color: #6da28e;
   --profile-bg-color: #cbf8c885;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  place-items: center;
+  transition: all 0.2s linear;
 }
 
 header h1 {
@@ -152,8 +154,15 @@ ul li::before {
 }
 
 @media screen and (max-width: 768px) {
+  .about {
+    padding-right: 8rem;
+  }
+
+  .about h1 {
+    padding-left: 4rem;
+  }
+
   .content .profile-img {
-    padding-right: 6rem;
     padding-top: 5px;
   }
 
@@ -170,7 +179,6 @@ ul li::before {
 
   .content .bio {
     padding-top: 4rem;
-    padding: 4rem 3rem 1rem 5rem;
   }
 }
 </style>

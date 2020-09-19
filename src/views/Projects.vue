@@ -61,6 +61,7 @@ export default {
   --header-color: #5c8d89;
   --primary-color: #ddfddb;
   --secondary-color: #6da28e;
+  transition: all 0.2s linear;
 }
 
 header h1 {
@@ -127,8 +128,13 @@ header h1 {
 }
 
 @media screen and (max-width: 768px) {
+  .projects h1 {
+    padding-right: 6rem;
+  }
+
   .project-cards {
     grid-template-columns: repeat(1, minmax(250px, 1fr));
+    padding-right: 6rem;
   }
 
   .card {

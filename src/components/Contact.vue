@@ -55,6 +55,10 @@ export default {
 </script>
 
 <style scoped>
+.modal {
+  background-color: #a7d7c5;
+  border-radius: 30px;
+}
 .message {
   resize: none;
 }

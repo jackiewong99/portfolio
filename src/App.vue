@@ -10,7 +10,7 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#callToAction">Contact</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
 
         <!-- **RESUME OPENS NEW TAB -->
         <li><a class="nav-link" href="#">Resume</a></li>
@@ -35,13 +35,21 @@
         <Projects />
       </section>
       <!-- CONTACT -->
-      <section id="contact-modal">
-        <Contact />
-      </section>
       <section id="contact">
         <div>
           <h1>Interested?</h1>
+          <div class="callToAction">
+            <p>
+              I'm always looking for new opportunities and my inbox is open to
+              any messages. I will get back to any inquiries, questions, or any
+              other messages as soon as possible!
+            </p>
+            <button>Get In Touch</button>
+          </div>
         </div>
+      </section>
+      <section id="contact-modal">
+        <Contact />
       </section>
     </main>
   </div>
@@ -253,7 +261,11 @@ main {
 
 /* PROJECTS */
 #projects {
-  padding: 4rem 1rem 10rem 1rem;
+  padding: 4rem 1rem 18rem 1rem;
+}
+
+#contact {
+  padding: 4rem 1rem 17rem 1rem;
 }
 
 /* MAIN MEDIA QUERIES */

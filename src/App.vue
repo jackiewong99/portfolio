@@ -10,7 +10,7 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li><a class="nav-link" href="#callToAction">Contact</a></li>
 
         <!-- **RESUME OPENS NEW TAB -->
         <li><a class="nav-link" href="#">Resume</a></li>
@@ -35,7 +35,14 @@
         <Projects />
       </section>
       <!-- CONTACT -->
-      <section id="contact"></section>
+      <section id="contact-modal">
+        <Contact />
+      </section>
+      <section id="contact">
+        <div>
+          <h1>Interested?</h1>
+        </div>
+      </section>
     </main>
   </div>
 </template>
@@ -44,13 +51,15 @@
 import Home from './views/Home';
 import About from './views/About';
 import Projects from './views/Projects';
+import Contact from './components/Contact';
 
 export default {
   name: 'App',
   components: {
     Home,
     About,
-    Projects
+    Projects,
+    Contact
   },
   methods: {
     navSlide() {
@@ -62,6 +71,7 @@ export default {
       burger.classList.toggle('toggle');
 
       if (nav.style.backgroundColor === '') {
+        nav.style.borderRadius = '30px 0px 0px 30px';
         nav.style.backgroundColor = 'var(--primary-color)';
       } else {
         nav.style.backgroundColor = '';
@@ -97,14 +107,14 @@ body {
 }
 
 #app {
+  --primary-color: #a7d7c5;
+  --secondary-color: #5c8d89;
+  --hover-color: #57ddf3;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  --primary-color: #a7d7c5;
-  --secondary-color: #5c8d89;
-  --hover-color: #57ddf3;
 }
 
 /* NAV */
@@ -238,7 +248,7 @@ main {
 
 /* ABOUT */
 #about {
-  padding: 9rem 5rem 19rem 5rem;
+  padding: 9rem 5rem 19rem 3rem;
 }
 
 /* PROJECTS */
@@ -277,9 +287,10 @@ main {
   }
 }
 
-@media screen and (max-width: 527px) {
+@media screen and (max-width: 578px) {
   #home {
-    padding-left: 4rem;
+    padding-left: 40px;
+    padding-right: 3rem;
   }
 }
 </style>

@@ -159,10 +159,11 @@ ul li::before {
   }
 
   .about h1 {
-    padding-left: 4rem;
+    padding-left: 3rem;
   }
 
   .content .profile-img {
+    padding-left: 2rem;
     padding-top: 5px;
   }
 

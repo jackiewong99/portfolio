@@ -69,6 +69,11 @@ export default {
     Projects,
     Contact
   },
+  data() {
+    return {
+      isDisplayModal: false
+    };
+  },
   methods: {
     navSlide() {
       const burger = this.$refs.burger;
@@ -109,7 +114,7 @@ html {
 }
 
 body {
-  background-color: #ffffed;
+  background-color: #fdfdf8;
   margin: 0;
   padding: 0;
 }

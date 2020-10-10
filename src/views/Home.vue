@@ -47,7 +47,7 @@ p {
 }
 
 button {
-  background-color: #ffffed;
+  background-color: #fdfdf8;
   border: 3px solid var(--secondary-text-color);
   border-radius: 6px;
   color: var(--secondary-text-color);

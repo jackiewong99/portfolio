@@ -1,48 +1,55 @@
 <template>
-  <div class="modal">
-    <div class="modal-content">
-      <div class="model-header">
-        <div class="closeBtn">&times;</div>
-        <h2>Get In Touch</h2>
-      </div>
-      <div class="modal-body">
-        <p>
-          I am open to any new opportunities and so is my inbox. No matter the
-          message, I will get back to you as soon as possible!
-        </p>
-        <!-- CONTACT INFO FORM -->
-        <form @submit.prevent="submitForm">
-          <label for="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            class="email"
-            placeholder="sample@gmail.com"
-          />
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            name="subject"
-            class="subject"
-            placeholder="Subject"
-          />
-          <label for="message">Message</label>
-          <textarea
-            name="message"
-            class="message"
-            cols="70"
-            rows="20"
-            placeholder="Hello!"
-          ></textarea>
-          <input type="submit" value="Send" />
-        </form>
-        <!-- SEND BUTTON -->
-        <!-- Add looping animation of paper airplane ready to fly (shaking left and right) -->
-        <!-- When user clicks button -->
-        <!-- Animate paper airplane flying off screen -->
-        <!-- Remove form and Show loading animation -->
-        <!-- When successful, animate paper airplane flying in from left to the buttom center -->
-        <!-- And fade in text: "Sent!" -->
+  <div class="contact-modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="closeBtn" v-on:click="emitHideModal">&times;</div>
+            <h2>Get In Touch</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              I am open to any new opportunities and so is my inbox. No matter
+              the message, I will get back to you as soon as possible!
+            </p>
+            <!-- CONTACT FORM -->
+            <form method="POST" data-netlify="true">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="email"
+                placeholder="John Doe"
+              />
+              <label class="email-label" for="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                class="email"
+                placeholder="sample@gmail.com"
+              />
+              <label class="subject-label" for="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                class="subject"
+                placeholder="A Subject"
+              />
+              <label class="msg-label" for="message">Message</label>
+              <textarea
+                name="message"
+                class="message"
+                cols="70"
+                rows="15"
+                placeholder="Hello!"
+              ></textarea>
+              <div data-netlify-recaptcha="true"></div>
+              <div class="submit-btn">
+                <input type="submit" value="Send" />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -50,16 +57,138 @@
 
 <script>
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  data() {
+    return {
+      displayModal: Boolean
+    };
+  },
+  methods: {
+    emitHideModal() {
+      this.displayModal = false;
+      this.$emit('modalStateChange', this.displayModal);
+    }
+  }
 };
 </script>
 
 <style scoped>
-.modal {
+.modal-mask {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 6%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: block;
+}
+
+.modal-content {
   background-color: #a7d7c5;
   border-radius: 30px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
+
+.modal-header {
+  color: #275854;
+}
+
+.modal-body {
+  color: #275854;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+}
+
+label:first-child {
+  margin-bottom: 5px;
+}
+
+.email-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.subject-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.msg-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  appearance: none;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  font-family: inherit;
+  padding: 7px;
+  margin: 0;
+  width: 100%;
+  transition: all 0.1s ease;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #5c8d89;
+  outline: none;
+}
+
+input {
+  width: 15rem;
+}
+
 .message {
   resize: none;
+}
+
+.submit-btn {
+  text-align: center;
+}
+
+.submit-btn input {
+  background-color: #a7d7c5;
+  border: 3px solid #275854;
+  border-radius: 6px;
+  color: #275854;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 0px 0px 4px;
+  padding: 20px 30px;
+  outline: none;
+  transition: 0.3s ease-in;
+}
+
+.submit-btn input:hover {
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.6;
+}
+
+.closeBtn {
+  cursor: pointer;
+  float: right;
+  font-size: 25px;
+  transition: 0.3s ease-in;
+}
+
+.closeBtn:hover {
+  color: rgba(92, 141, 137, 0.5);
+  opacity: 0.6;
 }
 </style>

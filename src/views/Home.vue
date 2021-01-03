@@ -7,7 +7,6 @@
       I am a self-learning web developer based in Honolulu, HI specializing in
       building modern websites, web apps, and all else on the web.
     </p>
-    <button>Get In Touch</button>
   </div>
 </template>
 
@@ -44,25 +43,6 @@ p {
   color: var(--secondary-text-color);
   font-size: 18px;
   margin: 0px 0px 5px 4px;
-}
-
-button {
-  background-color: #fdfdf8;
-  border: 3px solid var(--secondary-text-color);
-  border-radius: 6px;
-  color: var(--secondary-text-color);
-  cursor: pointer;
-  font-size: 18px;
-  margin: 5px 0px 0px 4px;
-  padding: 20px 30px;
-  outline: none;
-  transition: 0.3s ease-in;
-}
-
-button:hover {
-  /* background-color: rgba(255, 255, 237, 0.3); */
-  background-color: rgba(236, 236, 211, 0.3);
-  opacity: 0.6;
 }
 
 .name {

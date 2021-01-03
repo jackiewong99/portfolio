@@ -6,43 +6,121 @@
     <div class="project-cards">
       <div class="card">
         <div class="card-content">
-          <img src="../assets/logo.png" alt="" />
+          <a
+            class="project-repo-link"
+            href="https://github.com/gruhb-doc/gruhb-doc"
+            target="_blank"
+            ><i class="project-icon far fa-folder-open fa-10x"></i
+          ></a>
           <div class="container">
-            <h2>Form Validation</h2>
+            <a
+              class="project-live-link"
+              href="https://gruhb.xyz/#"
+              target="_blank"
+              ><h2>Gruhb</h2></a
+            >
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              incidunt laboriosam fugiat iste tempore perferendis nostrum ipsam.
-              Praesentium nemo cum veniam placeat dicta voluptate, atque
-              officiis optio ex possimus quia doloribus quasi quis ipsa at.
+              Similar to Grub Bot, this web app makes finding a place to eat on
+              the UH Manoa campus an easier task. This was a group project
+              (group of 3) for the final project of my ICS 314 Software
+              Engineering course.
             </p>
+            <div class="tech-stack-container">
+              <ul>
+                <li class="tech-stack">React</li>
+                <li class="tech-stack">Node.js</li>
+                <li class="tech-stack">Meteor</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <img src="../assets/logo.png" alt="" />
+          <a
+            class="project-repo-link"
+            href="https://github.com/jackiewong99/form-validation"
+            target="_blank"
+            ><i class="project-icon far fa-folder-open fa-10x"></i
+          ></a>
           <div class="container">
-            <h2>Grub Bot</h2>
+            <a
+              class="project-live-link"
+              href="https://form-validation-29df6.web.app/"
+              target="_blank"
+              ><h2>Form Validation</h2></a
+            >
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              incidunt laboriosam fugiat iste tempore perferendis nostrum ipsam.
-              Praesentium nemo cum veniam placeat dicta voluptate, atque
-              officiis optio ex possimus quia doloribus quasi quis ipsa at.
+              Form validating project that validates the common form fields'
+              data input. This project was my first experience using Vue JS (fun
+              fact: this portfolio website is also built with Vue JS).
             </p>
+            <div class="tech-stack-container">
+              <ul>
+                <li class="tech-stack">Vue</li>
+                <li class="tech-stack">Firebase</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <img src="../assets/logo.png" alt="" />
+          <a
+            class="project-repo-link"
+            href="https://github.com/jackiewong99/grub-bot"
+            target="_blank"
+            ><i class="project-icon far fa-folder-open fa-10x"></i
+          ></a>
           <div class="container">
-            <h2>Pathfinding Visualizer</h2>
+            <a
+              class="project-live-link"
+              href="https://jackiewong99.github.io/grub-bot/"
+              target="_blank"
+              ><h2>Grub Bot</h2></a
+            >
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              incidunt laboriosam fugiat iste tempore perferendis nostrum ipsam.
-              Praesentium nemo cum veniam placeat dicta voluptate, atque
-              officiis optio ex possimus quia doloribus quasi quis ipsa at.
+              A web app that simplifies the task of finding a place to eat. The
+              user answers a few questions and the chat bot randomly finds a
+              restaurant based on the user's preference using the Yelp Fusion
+              API.
             </p>
+            <div class="tech-stack-container">
+              <ul>
+                <li class="tech-stack">JS</li>
+                <li class="tech-stack">Node.js</li>
+                <li class="tech-stack">SCSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <a
+            class="project-repo-link"
+            href="https://github.com/jackiewong99/Pathfinding-Visualizer"
+            target="_blank"
+            ><i class="project-icon far fa-folder-open fa-10x"></i
+          ></a>
+          <div class="container">
+            <a
+              class="project-live-link"
+              href="https://jackiewong99.github.io/Pathfinding-Visualizer/#"
+              target="_blank"
+              ><h2>Pathfinding Visualizer</h2></a
+            >
+            <p>
+              A simple project that currently visualizes Dijkstra's Algorithm
+              and is hosted on GitHub Pages. This project was also my first dive
+              into React JS.
+            </p>
+            <div class="tech-stack-container">
+              <ul>
+                <li class="tech-stack">React</li>
+                <li class="tech-stack">CSS</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -60,13 +138,14 @@ export default {
 .projects {
   --header-color: #5c8d89;
   --primary-color: #ddfddb;
-  --secondary-color: #6da28e;
+  --secondary-color: #12714d;
   transition: all 0.2s linear;
 }
 
 header h1 {
   color: var(--header-color);
   font-size: 32px;
+  text-align: center;
 }
 
 .project-cards {
@@ -81,15 +160,48 @@ header h1 {
 .card {
   background-color: var(--primary-color);
   border-radius: 15px;
-  transition: 0.3s ease-in;
   height: 425px;
+  transition: 0.3s ease-in;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
+.project-repo-link {
+  text-decoration: none;
+}
+
+.project-live-link {
+  text-decoration: none;
+  transition: 0.2s all ease-in;
+}
+
+.project-live-link:hover {
+  opacity: 0.6;
+}
+
+.project-live-link:active {
+  opacity: 0.3;
+}
+
+.project-icon {
+  color: var(--header-color);
+  transition: 0.2s all ease-in;
+}
+
+.project-icon:hover {
+  opacity: 0.6;
+}
+
+.project-icon:active {
+  opacity: 0.3;
+}
+
 .card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 2rem;
 }
 
@@ -102,8 +214,23 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
   color: var(--secondary-color);
+}
+
+.card .container p {
+  text-align: left;
+}
+
+.tech-stack-container {
+  margin-right: 2rem;
+}
+
+.tech-stack {
+  display: inline;
+  list-style: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 1268px) {

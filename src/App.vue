@@ -1,27 +1,34 @@
 <template>
   <div id="app">
     <!-- NAV BAR -->
-    <nav class="nav">
+    <nav class="nav" v-bind:class="{ blurBg: blurBackground }">
       <div class="logo">
-        Logo
+        <a href="/">JACKIE WONG</a>
       </div>
       <ul ref="nav" class="nav-links">
         <li>
           <a class="nav-link" href="#about">About</a>
         </li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li>
+          <a class="nav-link" href="#" v-on:click="displayModal">
+            Contact
+          </a>
+        </li>
 
         <!-- **RESUME OPENS NEW TAB -->
-        <li><a class="nav-link" href="#">Resume</a></li>
+        <li><a class="nav-link" href="#">RESUME</a></li>
       </ul>
       <div v-on:click="navSlide" class="burger" ref="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+        <div class="line1 burger-bar"></div>
+        <div class="line2 burger-bar"></div>
+        <div class="line3 burger-bar"></div>
       </div>
     </nav>
-    <main>
+    <section id="contact-modal">
+      <Contact v-if="isDisplayModal" v-on:modalStateChange="hideModal" />
+    </section>
+    <main v-bind:class="{ blurBg: blurBackground }">
       <!-- HOME -->
       <section id="home">
         <Home />
@@ -34,22 +41,29 @@
       <section id="projects">
         <Projects />
       </section>
-      <!-- CONTACT -->
-      <section id="contact">
+      <!-- FOOTER -->
+      <section id="footer">
         <div>
           <h1>Interested?</h1>
-          <div class="callToAction">
-            <p>
-              I'm always looking for new opportunities and my inbox is open to
-              any messages. I will get back to any inquiries, questions, or any
-              other messages as soon as possible!
+          <div class="footer-content">
+            <p class="footer-text">
+              I'm always looking for new opportunities and my inbox is always
+              open to any messages. I will get back to any inquiries, questions,
+              or any other messages as soon as possible!
             </p>
-            <button>Get In Touch</button>
+            <button class="footer-btn" v-on:click="displayModal">
+              Get In Touch
+            </button>
+            <div class="social-icon-container">
+              <a target="_blank" href="https://github.com/jackiewong99"
+                ><i class="social-icon fab fa-github fa-3x"></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/in/jackiezwong"
+                ><i class="social-icon fab fa-linkedin-in fa-3x"></i
+              ></a>
+            </div>
           </div>
         </div>
-      </section>
-      <section id="contact-modal">
-        <Contact />
       </section>
     </main>
   </div>
@@ -71,7 +85,8 @@ export default {
   },
   data() {
     return {
-      isDisplayModal: false
+      isDisplayModal: false,
+      blurBackground: false
     };
   },
   methods: {
@@ -102,6 +117,14 @@ export default {
             0.5}s`;
         }
       });
+    },
+    hideModal(hide) {
+      this.isDisplayModal = hide;
+      this.blurBackground = false;
+    },
+    displayModal() {
+      this.isDisplayModal = true;
+      this.blurBackground = true;
     }
   }
 };
@@ -119,6 +142,11 @@ body {
   padding: 0;
 }
 
+.blurBg {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
 #app {
   --primary-color: #a7d7c5;
   --secondary-color: #5c8d89;
@@ -126,7 +154,6 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
@@ -135,30 +162,53 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40x 100px;
   min-height: 8vh;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 3;
+  transition: all 0.3s ease;
+}
+
+nav.fixed-nav {
+  position: fixed;
+  background-color: var(--primary-color);
 }
 
 .logo {
-  color: var(--secondary-color);
   cursor: pointer;
   font-size: 20px;
+  font-weight: 700;
   letter-spacing: 5px;
   margin-left: 4rem;
 }
 
+.logo a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
 .nav-links {
+  position: relative;
   display: flex;
   list-style: none;
   justify-content: space-around;
+  align-items: center;
   margin-right: 4rem;
   width: 35%;
 }
 
+.nav-links li {
+  position: relative;
+}
+
 .nav-link {
+  position: relative;
   color: var(--secondary-color);
   cursor: pointer;
   font-size: 14px;
+  font-weight: 700;
   letter-spacing: 3px;
   text-decoration: none;
   transition: color 0.25s ease-in;
@@ -176,7 +226,7 @@ nav {
 }
 
 .burger div {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 50px;
   height: 3px;
   width: 25px;
@@ -252,6 +302,7 @@ main {
   grid-template-rows: auto 1fr auto;
   place-items: center;
   padding-top: 10px;
+  transition: all 0.3s ease;
 }
 
 /* HOME */
@@ -269,8 +320,65 @@ main {
   padding: 4rem 1rem 18rem 1rem;
 }
 
-#contact {
-  padding: 4rem 1rem 17rem 1rem;
+/* FOOTER */
+#footer {
+  padding: 1rem 1rem 10rem 1rem;
+  transition: all 0.2s linear;
+}
+
+#footer div h1 {
+  color: var(--secondary-color);
+  font-size: 32px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text {
+  color: #6da28e;
+  width: clamp(35ch, 50%, 46ch);
+}
+
+.footer-btn {
+  background-color: #fdfdf8;
+  border: 3px solid #6da28e;
+  border-radius: 6px;
+  color: #6da28e;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 5px 0px 0px 4px;
+  padding: 20px 30px;
+  outline: none;
+  transition: 0.3s all ease-in;
+}
+
+.footer-btn:hover {
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.6;
+}
+
+.social-icon-container {
+  margin-top: 2rem;
+}
+
+.social-icon {
+  color: #6da28e;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 8px;
+  transition: 0.2s all ease-in;
+}
+
+.social-icon:hover {
+  opacity: 0.6;
+}
+
+.social-icon:active {
+  opacity: 0.3;
 }
 
 /* MAIN MEDIA QUERIES */
@@ -308,6 +416,16 @@ main {
   #home {
     padding-left: 40px;
     padding-right: 3rem;
+  }
+
+  #footer {
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #footer {
+    padding-right: 6rem;
   }
 }
 </style>

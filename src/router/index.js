@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Contact from '../components/Contact.vue';
+import App from '../App.vue';
 import SubmissionFail from '../components/SubmissionFail.vue';
 import SubmissionSuccess from '../components/SubmissionSuccess.vue';
 
@@ -11,8 +11,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Contact',
-      component: Contact
+      name: 'Home',
+      component: App
     },
     {
       path: '/thanks',

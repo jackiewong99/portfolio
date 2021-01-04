@@ -64,6 +64,7 @@
 </template>
 
 <script>
+import router from '../router/index.js';
 export default {
   name: 'Contact',
   data() {
@@ -101,10 +102,10 @@ export default {
         })
       })
         .then(() => {
-          this.$router.push('thanks');
+          router.push('thanks');
         })
         .catch(() => {
-          this.$router.push('404');
+          router.push('404');
         });
     }
   }

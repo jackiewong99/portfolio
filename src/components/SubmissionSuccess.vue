@@ -4,7 +4,7 @@
       Thank you for your interest! I will respond as soon as possible, have a
       nice day!
     </h1>
-    <router-link to="/">
+    <router-link :to="{ name: 'Contact' }">
       <button>Back to form.</button>
     </router-link>
   </div>

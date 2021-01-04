@@ -15,8 +15,6 @@ _Note_: The purpose of this website is to not act like a theme. For any question
 
 ## Getting Started
 
----
-
 Install Vue CLI
 
 ```
@@ -36,8 +34,6 @@ npm run serve
 ```
 
 ## Building For Production
-
----
 
 Create a production build by running the following script
 

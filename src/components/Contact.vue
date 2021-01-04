@@ -102,10 +102,10 @@ export default {
         })
       })
         .then(() => {
-          router.push('thanks');
+          router.push({ path: 'thanks' });
         })
         .catch(() => {
-          router.push('404');
+          router.push({ path: '404' });
         });
     }
   }

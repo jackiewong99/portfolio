@@ -3,11 +3,11 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header" v-if="displayForm">
             <div class="closeBtn" v-on:click="emitHideModal">&times;</div>
             <h2>Get In Touch</h2>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" v-if="displayForm">
             <p>
               I am open to any new opportunities and so is my inbox. No matter
               the message, I will get back to you as soon as possible!
@@ -64,7 +64,7 @@
               have a nice day!
             </h2>
             <button class="submission-btn" v-on:click="emitHideModal">
-              Back to website.
+              Back To Website
             </button>
           </div>
           <div class="modal-body" v-if="submissionFail">

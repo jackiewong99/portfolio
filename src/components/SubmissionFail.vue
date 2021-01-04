@@ -1,11 +1,8 @@
 <template>
-  <div class="submission-success">
-    <h1>
-      Oops, looks like something went wrong!
+  <div class="submission-fail">
+    <h1 class="submission-fail-text">
+      Oops, looks like something went wrong! Try refreshing the page.
     </h1>
-    <router-link :to="{ name: 'Contact' }">
-      <button>Back to form.</button>
-    </router-link>
   </div>
 </template>
 
@@ -15,4 +12,23 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.submission-fail {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 6%;
+  left: 0;
+  text-align: left;
+}
+
+.submission-fail::before {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  z-index: -1;
+}
+
+.submission-fail-text {
+  color: #275854;
+}
+</style>

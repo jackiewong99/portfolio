@@ -11,9 +11,9 @@
         </li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
         <li>
-          <a class="nav-link" href="#" v-on:click="displayModal">
+          <button class="nav-link contact-btn" v-on:click="displayModal">
             Contact
-          </a>
+          </button>
         </li>
 
         <!-- **RESUME OPENS NEW TAB -->
@@ -210,6 +210,12 @@ nav.fixed-nav {
   position: relative;
 }
 
+.contact-btn {
+  background-color: rgba(256, 256, 256, 0);
+  border: none;
+  outline: none;
+}
+
 .nav-link {
   position: relative;
   color: var(--secondary-color);
@@ -221,10 +227,13 @@ nav.fixed-nav {
   transition: color 0.25s ease-in;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
 .nav-link:focus,
 .nav-link:active {
-  color: var(--hover-color);
+  opacity: 0.3;
 }
 
 .burger {

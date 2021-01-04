@@ -34,7 +34,7 @@
     </nav>
     <section id="contact-modal">
       <Contact v-if="isDisplayModal" v-on:modalStateChange="hideModal" />
-      <router-view class="form-submission-text"></router-view>
+      <router-view id="form-submission-text"></router-view>
     </section>
     <main v-bind:class="{ blurBg: blurBackground }">
       <!-- HOME -->
@@ -326,11 +326,6 @@ main {
 /* PROJECTS */
 #projects {
   padding: 4rem 1rem 18rem 1rem;
-}
-
-/* FORM SUBMISSION */
-.form-submission-text {
-  padding: 13rem 1rem 10rem 1rem;
 }
 
 /* FOOTER */

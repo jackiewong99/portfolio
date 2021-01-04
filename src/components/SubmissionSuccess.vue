@@ -22,15 +22,16 @@ export default {
   flex-direction: column;
   align-items: end;
   justify-content: end;
+  padding: 13rem 1rem 10rem 1rem;
   width: 100%;
   text-align: left;
-  z-index: 15;
+  z-index: 20;
 }
 
 .submission-success::before {
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  z-index: 14;
+  z-index: 19;
 }
 
 .submission-success-text {

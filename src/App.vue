@@ -17,7 +17,14 @@
         </li>
 
         <!-- **RESUME OPENS NEW TAB -->
-        <li><a class="nav-link" href="#">RESUME</a></li>
+        <li>
+          <a
+            class="nav-link"
+            href="./Jackie_Wong_Resume_2020.docx.pdf"
+            target="_blank"
+            >RESUME</a
+          >
+        </li>
       </ul>
       <div v-on:click="navSlide" class="burger" ref="burger">
         <div class="line1 burger-bar"></div>

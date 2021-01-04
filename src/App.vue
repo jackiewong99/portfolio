@@ -34,7 +34,7 @@
     </nav>
     <section id="contact-modal">
       <Contact v-if="isDisplayModal" v-on:modalStateChange="hideModal" />
-      <router-view></router-view>
+      <router-view class="form-submission-text"></router-view>
     </section>
     <main v-bind:class="{ blurBg: blurBackground }">
       <!-- HOME -->
@@ -328,6 +328,11 @@ main {
   padding: 4rem 1rem 18rem 1rem;
 }
 
+/* FORM SUBMISSION */
+.form-submission-text {
+  z-index: 8;
+}
+
 /* FOOTER */
 #footer {
   padding: 1rem 1rem 10rem 1rem;
@@ -365,8 +370,13 @@ main {
 }
 
 .footer-btn:hover {
-  background-color: rgba(236, 236, 211, 0.3);
+  background-color: rgba(236, 236, 211, 0.6);
   opacity: 0.6;
+}
+
+.footer-btn:active {
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.3;
 }
 
 .social-icon-container {

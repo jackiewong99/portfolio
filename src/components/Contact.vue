@@ -216,8 +216,13 @@ input {
 }
 
 .submit-btn input:hover {
-  background-color: rgba(236, 236, 211, 0.3);
+  background-color: rgba(236, 236, 211, 0.6);
   opacity: 0.6;
+}
+
+.submit-btn input:active {
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.3;
 }
 
 .closeBtn {

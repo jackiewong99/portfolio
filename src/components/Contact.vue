@@ -15,6 +15,7 @@
             <!-- CONTACT FORM -->
             <form
               @submit.prevent="handleSubmit"
+              v-if="displayForm"
               name="contact"
               method="POST"
               data-netlify="true"
@@ -57,6 +58,20 @@
               </div>
             </form>
           </div>
+          <div class="modal-body" v-if="submissionSuccess">
+            <h2>
+              Thank you for your interest! I will respond as soon as possible,
+              have a nice day!
+            </h2>
+            <button class="submission-btn" v-on:click="emitHideModal">
+              Back to website.
+            </button>
+          </div>
+          <div class="modal-body" v-if="submissionFail">
+            <h2>
+              Oops, looks like something went wrong! Try refreshing the page.
+            </h2>
+          </div>
         </div>
       </div>
     </div>
@@ -64,12 +79,14 @@
 </template>
 
 <script>
-import router from '../router/index.js';
 export default {
   name: 'Contact',
   data() {
     return {
       displayModal: Boolean,
+      displayForm: true,
+      submissionSuccess: false,
+      submissionFail: false,
       form: {
         name: '',
         email: '',
@@ -81,6 +98,9 @@ export default {
   methods: {
     emitHideModal() {
       this.displayModal = false;
+      this.displayForm = true;
+      this.submissionSuccess = false;
+      this.submissionFail = false;
       this.$emit('modalStateChange', this.displayModal);
     },
     encode(data) {
@@ -102,10 +122,12 @@ export default {
         })
       })
         .then(() => {
-          router.push({ path: 'thanks' });
+          this.displayForm = false;
+          this.submissionSuccess = true;
         })
         .catch(() => {
-          router.push({ path: '404' });
+          this.displayForm = false;
+          this.submissionFail = true;
         });
     }
   }
@@ -235,5 +257,30 @@ input {
 .closeBtn:hover {
   color: rgba(92, 141, 137, 0.5);
   opacity: 0.6;
+}
+
+.submission-btn {
+  background-color: #a7d7c5;
+  border: 3px solid #275854;
+  border-radius: 6px;
+  color: #275854;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 0px 0px 4px;
+  padding: 20px 30px;
+  outline: none;
+  text-align: center;
+  transition: 0.3s ease-in;
+}
+
+.submission-btn:hover {
+  background-color: rgba(236, 236, 211, 0.6);
+  opacity: 0.6;
+}
+
+.submission-btn:active {
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.3;
 }
 </style>

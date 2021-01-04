@@ -34,7 +34,6 @@
     </nav>
     <section id="contact-modal">
       <Contact v-if="isDisplayModal" v-on:modalStateChange="hideModal" />
-      <router-view id="form-submission-text"></router-view>
     </section>
     <main v-bind:class="{ blurBg: blurBackground }">
       <!-- HOME -->

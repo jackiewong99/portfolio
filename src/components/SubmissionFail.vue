@@ -1,8 +1,6 @@
 <template>
   <div class="submission-fail">
-    <h1 class="submission-fail-text">
-      Oops, looks like something went wrong! Try refreshing the page.
-    </h1>
+    <h1 class="submission-fail-text"></h1>
   </div>
 </template>
 

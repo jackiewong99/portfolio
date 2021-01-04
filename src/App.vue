@@ -330,7 +330,7 @@ main {
 
 /* FORM SUBMISSION */
 .form-submission-text {
-  z-index: 8;
+  padding: 13rem 1rem 10rem 1rem;
 }
 
 /* FOOTER */

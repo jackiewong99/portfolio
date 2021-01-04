@@ -16,7 +16,7 @@ export default {
 .submission-fail {
   display: block;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 6%;
   left: 0;
   text-align: left;

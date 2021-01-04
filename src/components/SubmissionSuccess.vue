@@ -5,7 +5,7 @@
       nice day!
     </h1>
     <router-link :to="{ name: 'Home' }">
-      <button class="nav-btn">Back to website.</button>
+      <button class="nav-btn">Back to form.</button>
     </router-link>
   </div>
 </template>
@@ -18,18 +18,19 @@ export default {
 
 <style scoped>
 .submission-success {
-  display: block;
-  position: fixed;
-  z-index: 10;
-  top: 6%;
-  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  width: 100%;
   text-align: left;
+  z-index: 15;
 }
 
 .submission-success::before {
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  z-index: -1;
+  z-index: 14;
 }
 
 .submission-success-text {
@@ -40,7 +41,7 @@ export default {
   text-align: center;
 }
 
-.nav-btn input {
+.nav-btn {
   background-color: #a7d7c5;
   border: 3px solid #275854;
   border-radius: 6px;

@@ -6,7 +6,6 @@
     <main>
       <div class="content">
         <div class="profile-img">
-          <!-- <p>Insert Profile Image Here</p> -->
           <img src="../assets/profile_img.jpg" alt="Profile Image" />
         </div>
         <div class="bio">

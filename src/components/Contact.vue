@@ -13,15 +13,37 @@
               the message, I will get back to you as soon as possible!
             </p>
             <!-- CONTACT FORM -->
-            <form name="contact" action="POST" data-netlify="true">
+            <form
+              @submit.prevent="handleSubmit"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <label for="name">Name</label>
-              <input type="text" name="name" class="email" />
+              <input
+                v-model="form.name"
+                type="text"
+                name="name"
+                class="email"
+              />
               <label class="email-label" for="email">Email</label>
-              <input type="email" name="email" class="email" />
+              <input
+                v-model="form.email"
+                type="email"
+                name="email"
+                class="email"
+              />
               <label class="subject-label" for="subject">Subject</label>
-              <input type="text" name="subject" class="subject" />
+              <input
+                v-model="form.subject"
+                type="text"
+                name="subject"
+                class="subject"
+              />
               <label class="msg-label" for="message">Message</label>
               <textarea
+                v-model="form.message"
                 type="message"
                 name="message"
                 class="message"
@@ -46,13 +68,44 @@ export default {
   name: 'Contact',
   data() {
     return {
-      displayModal: Boolean
+      displayModal: Boolean,
+      form: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      }
     };
   },
   methods: {
     emitHideModal() {
       this.displayModal = false;
       this.$emit('modalStateChange', this.displayModal);
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&');
+    },
+    handleSubmit() {
+      fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: this.encode({
+          'form-name': 'contact',
+          ...this.form
+        })
+      })
+        .then(() => {
+          this.$router.push('thanks');
+        })
+        .catch(() => {
+          this.$router.push('404');
+        });
     }
   }
 };

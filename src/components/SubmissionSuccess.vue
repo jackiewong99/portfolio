@@ -18,6 +18,7 @@ export default {
 
 <style scoped>
 .submission-success {
+  z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -25,13 +26,12 @@ export default {
   padding: 13rem 1rem 10rem 1rem;
   width: 100%;
   text-align: left;
-  z-index: 20;
 }
 
 .submission-success::before {
+  z-index: 19;
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  z-index: 19;
 }
 
 .submission-success-text {

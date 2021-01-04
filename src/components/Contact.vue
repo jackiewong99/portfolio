@@ -15,26 +15,11 @@
             <!-- CONTACT FORM -->
             <form method="POST" data-netlify="true">
               <label for="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                class="email"
-                placeholder="John Doe"
-              />
+              <input type="text" name="name" class="email" />
               <label class="email-label" for="email">Email</label>
-              <input
-                type="text"
-                name="email"
-                class="email"
-                placeholder="sample@gmail.com"
-              />
+              <input type="text" name="email" class="email" />
               <label class="subject-label" for="subject">Subject</label>
-              <input
-                type="text"
-                name="subject"
-                class="subject"
-                placeholder="A Subject"
-              />
+              <input type="text" name="subject" class="subject" />
               <label class="msg-label" for="message">Message</label>
               <textarea
                 name="message"

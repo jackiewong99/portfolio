@@ -13,15 +13,16 @@
               the message, I will get back to you as soon as possible!
             </p>
             <!-- CONTACT FORM -->
-            <form method="POST" data-netlify="true">
+            <form name="contact" action="POST" data-netlify="true">
               <label for="name">Name</label>
               <input type="text" name="name" class="email" />
               <label class="email-label" for="email">Email</label>
-              <input type="text" name="email" class="email" />
+              <input type="email" name="email" class="email" />
               <label class="subject-label" for="subject">Subject</label>
               <input type="text" name="subject" class="subject" />
               <label class="msg-label" for="message">Message</label>
               <textarea
+                type="message"
                 name="message"
                 class="message"
                 cols="70"

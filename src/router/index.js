@@ -7,6 +7,7 @@ import SubmissionSuccess from '../components/SubmissionSuccess.vue';
 Vue.use(Router);
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

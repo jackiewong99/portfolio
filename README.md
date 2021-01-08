@@ -1,6 +1,6 @@
-# portfolio (2021)
+# portfolio (v1)
 
-Welcome to the repository of my 2021 portfolio!
+Welcome to the repository of my portfolio (v1)!
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a39d130b-d143-41cc-a1cc-ad0f96e03499/deploy-status)](https://app.netlify.com/sites/jackiewong/deploys)
 

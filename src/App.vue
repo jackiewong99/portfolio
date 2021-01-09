@@ -18,10 +18,7 @@
 
         <!-- **RESUME OPENS NEW TAB -->
         <li>
-          <a
-            class="nav-link"
-            href="./Jackie_Wong_Resume.docx.pdf"
-            target="_blank"
+          <a class="nav-link" href="./Jackie_Wong_Resume.pdf" target="_blank"
             >RESUME</a
           >
         </li>

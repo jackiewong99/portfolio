@@ -11,12 +11,11 @@
         <div class="bio">
           <p>
             Hi there! I'm Jackie, a self-learning developer based in Honolulu,
-            HI and am currently in my third year at the University of Hawaii at
-            Manoa, majoring in computer science. More importantly, I'm
-            passionate about exploring the possibilities of building cool
-            websites and scalable web apps that deliver a simple user interface
-            and modern user experience, while utilizing current backend
-            technologies when applicable.
+            HI and am currently studying at the University of Hawaii at Manoa,
+            majoring in computer science. I am passionate about exploring the
+            possibilities of building cool websites and scalable web apps that
+            deliver a simple user interface and modern user experience, while
+            utilizing current backend technologies when applicable.
           </p>
           <p>Technologies I've Worked With:</p>
           <div class="tech-list">
@@ -39,7 +38,7 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
 };
 </script>
 

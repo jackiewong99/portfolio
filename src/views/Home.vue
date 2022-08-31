@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
 };
 </script>
 
@@ -22,8 +22,6 @@ export default {
   --secondary-text-color: #6da28e;
   display: flex;
   flex-direction: column;
-  align-items: end;
-  justify-content: end;
   width: 100%;
   text-align: left;
   transition: all 0.2s linear;

@@ -85,12 +85,12 @@ export default {
     Home,
     About,
     Projects,
-    Contact
+    Contact,
   },
   data() {
     return {
       isDisplayModal: false,
-      blurBackground: false
+      blurBackground: false,
     };
   },
   methods: {
@@ -129,8 +129,8 @@ export default {
     displayModal() {
       this.isDisplayModal = true;
       this.blurBackground = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -225,7 +225,7 @@ nav.fixed-nav {
 }
 
 .nav-link:hover {
-  color: var(--hover-color);
+  color: var(--primary-color);
 }
 
 .nav-link:focus,

@@ -154,7 +154,6 @@ body {
 #app {
   --primary-color: #a7d7c5;
   --secondary-color: #5c8d89;
-  --hover-color: #57ddf3;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

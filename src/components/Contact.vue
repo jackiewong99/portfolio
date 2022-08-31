@@ -9,8 +9,8 @@
           </div>
           <div class="modal-body" v-if="displayForm">
             <p>
-              I am open to any new opportunities and so is my inbox. No matter
-              the message, I will get back to you as soon as possible!
+              I am open to any new opportunities and so is my inbox! I will get
+              back to your message as soon as possible.
             </p>
             <!-- CONTACT FORM -->
             <form
@@ -91,8 +91,8 @@ export default {
         name: '',
         email: '',
         subject: '',
-        message: ''
-      }
+        message: '',
+      },
     };
   },
   methods: {
@@ -106,7 +106,7 @@ export default {
     encode(data) {
       return Object.keys(data)
         .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
         )
         .join('&');
     },
@@ -114,12 +114,12 @@ export default {
       fetch('/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: this.encode({
           'form-name': 'contact',
-          ...this.form
-        })
+          ...this.form,
+        }),
       })
         .then(() => {
           this.displayForm = false;
@@ -129,8 +129,8 @@ export default {
           this.displayForm = false;
           this.submissionFail = true;
         });
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -8,6 +8,67 @@
         <div class="card-content">
           <a
             class="project-repo-link"
+            href="https://github.com/hot-n-code/ghg-tracker"
+            target="_blank"
+            ><i class="project-icon far fa-folder-open fa-10x"></i
+          ></a>
+          <div class="container">
+            <a
+              class="project-live-link"
+              href="https://github.com/hot-n-code/ghg-tracker"
+              target="_blank"
+              ><h2>GHG Tracker</h2></a
+            >
+            <p>
+              A web app developed in collaboration with Hawaiian Electric
+              Industries as a group project for my Software Engineering II
+              course. Allows residents of Hawai'i to track their daily
+              greenhouse gas emissions.
+            </p>
+            <div class="tech-stack-container">
+              <ul>
+                <li class="tech-stack">React</li>
+                <li class="tech-stack">Meteor</li>
+                <li class="tech-stack">Semantic UI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <a
+            class="project-repo-link"
+            href="https://github.com/jackiewong99/portfolio"
+            target="_blank"
+            ><i class="project-icon far fa-folder-open fa-10x"></i
+          ></a>
+          <div class="container">
+            <a
+              class="project-live-link"
+              href="https://www.wongjackie.com/"
+              target="_blank"
+              ><h2>Portfolio</h2></a
+            >
+            <p>
+              My first and current iteration of my portfolio website that I
+              designed and built in 2020. This website was built with Vue JS and
+              currently hosted on Netlify.
+            </p>
+            <div class="tech-stack-container">
+              <ul>
+                <li class="tech-stack">Vue</li>
+                <li class="tech-stack">Node.js</li>
+                <li class="tech-stack">CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <a
+            class="project-repo-link"
             href="https://github.com/gruhb-doc/gruhb-doc"
             target="_blank"
             ><i class="project-icon far fa-folder-open fa-10x"></i
@@ -15,15 +76,15 @@
           <div class="container">
             <a
               class="project-live-link"
-              href="https://gruhb.xyz/#"
+              href="https://github.com/gruhb-doc/gruhb-doc"
               target="_blank"
               ><h2>Gruhb</h2></a
             >
             <p>
-              Similar to Grub Bot, this web app makes finding a place to eat on
-              the UH Manoa campus an easier task. This was a group project
-              (group of 3) for the final project of my ICS 314 Software
-              Engineering course.
+              *No longer hosted :(* Similar to Grub Bot, this web app makes
+              finding a place to eat on the UH Manoa campus an easier task. This
+              was for the final group project of my ICS 314 Software Engineering
+              course.
             </p>
             <div class="tech-stack-container">
               <ul>
@@ -130,7 +191,7 @@
 
 <script>
 export default {
-  name: 'Projects'
+  name: 'Projects',
 };
 </script>
 

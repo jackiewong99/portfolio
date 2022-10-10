@@ -28,7 +28,7 @@
               <ul>
                 <li class="tech-stack">React</li>
                 <li class="tech-stack">Meteor</li>
-                <li class="tech-stack">Semantic UI</li>
+                <li class="tech-stack">Semantic</li>
               </ul>
             </div>
           </div>
@@ -82,8 +82,7 @@
             <p>
               *No longer hosted.* Similar to Grub Bot, this web app makes
               finding a place to eat on the UH Manoa campus an easier task. This
-              was for the final group project of my ICS 314 Software Engineering
-              course.
+              was a group project for my Software Engineering I course.
             </p>
             <div class="tech-stack-container">
               <ul>

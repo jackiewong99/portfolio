@@ -21,8 +21,7 @@
             >
             <p>
               A web app developed in collaboration with Hawaiian Electric
-              Industries as a group project for my Software Engineering II
-              course. Allows residents of Hawai'i to track their daily
+              Industries to allow residents of Hawai'i to track their daily
               greenhouse gas emissions.
             </p>
             <div class="tech-stack-container">
@@ -81,7 +80,7 @@
               ><h2>Gruhb</h2></a
             >
             <p>
-              *No longer hosted :(* Similar to Grub Bot, this web app makes
+              *No longer hosted.* Similar to Grub Bot, this web app makes
               finding a place to eat on the UH Manoa campus an easier task. This
               was for the final group project of my ICS 314 Software Engineering
               course.

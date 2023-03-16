@@ -2,8 +2,6 @@
 
 Welcome to the repository of my portfolio (v1)!
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a39d130b-d143-41cc-a1cc-ad0f96e03499/deploy-status)](https://app.netlify.com/sites/jackiewong/deploys)
-
 Feel free to fork this repository. However all I ask is that you give me credit by either linking my website [wongjackie.com](https://www.wongjackie.com/) or my [github profile](https://github.com/jackiewong99). Thank you and have fun creating your own website!
 
 _Note_: The purpose of this website is to not act like a theme. For any questions about your own code or implementation, please refer to the [Vue docs](https://vuejs.org/v2/guide/).
